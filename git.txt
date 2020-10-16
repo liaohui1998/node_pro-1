@@ -1,0 +1,55 @@
+下载地址:
+	1.https://npm.taobao.org/mirrors/git-for-windows
+	2.https://git-scm.com/downloads
+一.git简介:
+	1.可以备份,类似于网盘,可以版本控制,每天代码都可以备份,好处是代码不被覆盖
+	2.我们传统备份:建立文件夹,不停的往里复制,不好管理
+	3.每天写的代码都有不同的地方,不知道,那就得需要对比
+	4.相当于打游戏,每天可以存档,打不好会到那个节点,不停的"穿越"
+	5.多端共享:可以通过手机,PC,安卓,苹果随时随地的工作,在家也可以---有网就行
+	6.团队协作:可以将多个人的程序进行合并,比如多个人写一个程序,代码合在一起,你得对代码-不科学
+	7.git有强大的"分支"管理系统
+	8.git采用的分布式文件处理
+	9.svn采用集中式文件处理
+	10.git要比SVN要快
+二.git有三个区:
+	1.工作区:本地代码
+	2.暂存区/过渡区
+	3.历史区/版本管理:存在这里不会丢失
+三.操作:Administrator@W-20200824XBIIZ MINGW64 ~/Desktop
+	Administrator:用户名
+	W-20200824XBIIZ:计算机名称
+	MINGW64:系统
+	~:当前用户
+	/Desktop:位置
+	(1).命令:
+		$ pwd:当前目录
+		$ git config --list:查看用户配置列表
+			配置过:user.name=xxx 
+				  user.email=xxx
+		配置用户信息:
+			$ git config --global user.name shiyi-1113
+			$ git config --global user.email 2789227649@qq.com
+	(2).
+		1.初始化命令(不能嵌套初始化:只在根目录嵌套一遍) $ git init
+		2.初始化位置有问题,需要删除(也可以右键删除):$ rm -rf .git     
+			rf带有强制性        rm -rf删除的是文件夹
+			删除的时候注意:$ rm -rf *  这个命令是删除所有文件
+		3.创建文件夹:$ mkdir 目录名
+		4.清屏:$ clear
+		5.进入目录:$ cd 目录名
+		6.进入某盘:$ cd d:
+		7.当初始化完成时在目录后会出现:master(代表主分支)
+		8.查看项目目录(相当于dir/w):$ ls
+		9.显示详细的目录信息(相当于dir):$ ls -al
+		10.创建文件:$ touch 文件名.类型
+		11.查看文件夹内容(相当于type 1.txt):$ cat 1.txt
+		12.进入文件:$ vi 1.txt
+			i:编辑
+			按一下Esc,然后输入 :wq 退出
+    (3).文件提交
+        1、git staus:查看状态-->红色
+        2、git add . :将所有的文件提交到暂存区   git add -A  执行完后执行git status  ,颜色会会变成绿色
+        3、将暂存区的内容删除 ：$ git rm --cached . -r 通过git status，颜色又变为红色 （红色为工作区）
+        4、提交的时候不能从工作区直接提交到历史区，git commit -m 'root' -m  消息，必须添加，空不可以，没有也不行
+    
