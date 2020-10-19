@@ -85,3 +85,22 @@
 		4、在dev分支上提交到历史区，这个时候才能独立
 			切换到dev分支，提交到历史区：git commit -m 'add 2.js'  ,ls 查看
 			切换到master分支查看，ls发现2.js没有了
+	(10).分支合并
+		1、切换到主分支，现在是dev分支的版本要高于master，通过git log来查看
+		2、git merge dev 将dev分支合并到主分支，怎么证明你合并成功了，通过ls来查看，原来的2.js在marster分支下是看不见的，如果能合并成功，就可以看见。
+
+练习：
+	1、再分支上创建的文件，只有提交到历史区，才属于自己分支的。
+	2、 git commit -a -m 'first' ，一次也没有哦提交到历史区，只能先提交到暂存区，（第一次是不能一次性提交到历史区的，只能先提交到暂存区）
+	3、创建文件： echo 内容>2.txt   //将内容方到刚创建的2.txt中
+远程仓库：
+	1、只有本地的历史区才能提交到github上，其他区是不可以的,尤其是工作区
+	2、创建项目，项目中有一个readme.md文件，描述文件，描述项目的。
+	3、rm -rf .idea  删除文件的
+	4、有些文件不想删除，但是也不想上传,先创建一个配置文件  .gitignore文件
+		写入不想上传的文件名称
+	5、创建远程仓库：
+		将你的项目推到位置上
+		git remote add origin https://github.com/insistMiss/node_pro.git
+		添加到orinin这个仓库中
+		git push -u origin main
