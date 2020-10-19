@@ -109,3 +109,11 @@
 		2、提交到历史区 git commit -m 'root'
 		3、git remote add origin https://github.com/insistMiss/node_pro.git   指定提交的位置
 		4、查看远程信息   git remote -v
+			origin  https://github.com/insistMiss/node_pro.git (fetch) 抓取
+			origin  https://github.com/insistMiss/node_pro.git (push)添加
+		5、git push origin master
+		6、当我们上线了修改了，线下也修改了，我们这时不能直接push，而是需要拉取，然后修改，在上传
+			1、git pull origin master
+			2、修改本地的（可以添加文件，注意冲突的文件）
+			3、git add .  git commit -m 'xxx'
+			4、git push origin master
