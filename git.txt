@@ -104,3 +104,8 @@
 		git remote add origin https://github.com/insistMiss/node_pro.git
 		添加到orinin这个仓库中
 		git push -u origin main
+	6、本地和仓库创建关联：
+		1、添加到暂存区，git add .
+		2、提交到历史区 git commit -m 'root'
+		3、git remote add origin https://github.com/insistMiss/node_pro.git   指定提交的位置
+		4、查看远程信息   git remote -v
